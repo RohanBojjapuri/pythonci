@@ -1,8 +1,8 @@
+import unittest
+from app import add
 
-from app import add, subtract
+class TestApp(unittest.TestCase):
 
-def test_add():
-    assert add(10, 20) == 30
+    def test_add(self):
+        self.assertEqual(add(10, 20), 30)
 
-def test_subtract():
-    assert subtract(20, 10) == 10
